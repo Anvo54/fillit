@@ -6,7 +6,7 @@
 #    By: ptuukkan <ptuukkan@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/18 12:36:17 by ptuukkan          #+#    #+#              #
-#    Updated: 2019/12/10 13:55:14 by avornane         ###   ########.fr        #
+#    Updated: 2019/12/10 14:03:30 by avornane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,9 +23,7 @@ INC = includes/
 
 GCC = gcc -Werror -Wextra -Wall -g
 
-all:
-	@$(MAKE) buildlib
-	@$(MAKE) $(NAME)
+all: $(NAME)
 
 $(NAME): $(OBJS) libft/$(LIB)
 	$(GCC) $(OBJS) -o $(NAME) libft/$(LIB)
